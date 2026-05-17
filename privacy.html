@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Datenschutzerklärung — Runboard</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">RUNBOARD<span class="dot">.</span></div>
+  <h1>Datenschutzerklärung — Runboard (Closed Beta)</h1>
+
+  <blockquote>
+    <strong>Version:</strong> V1 (Beta-Phase)<br />
+    <strong>Gültig:</strong> ab Aktivierung bis 06.01.2027<br />
+    <strong>Letzte Aktualisierung:</strong> 17.05.2026<br /><br />
+    Diese App befindet sich in der <strong>Closed-Beta-Phase</strong> und richtet sich an einen
+    geschlossenen Test-Nutzerkreis. Eine Public-Version mit aktualisierter Datenschutzerklärung
+    (V2) wird ab 07.01.2027 verfügbar sein.
+  </blockquote>
+
+  <hr />
+
+  <h2>1. Verantwortlicher</h2>
+  <p>Verantwortlich für die Datenverarbeitung im Sinne von Art. 4 Nr. 7 DSGVO ist:</p>
+  <p>
+    <strong>Carina Swoboda</strong><br />
+    in Vertretung für Leon Swoboda (geb. 07.01.2009, minderjährig zum Zeitpunkt dieser Erklärung)
+  </p>
+  <p class="addr">
+    Kreuttalstraße 7/1/6<br />
+    A-2123 Unterolberndorf<br />
+    Österreich
+  </p>
+  <p>
+    E-Mail: <a href="mailto:runboard.office@gmail.com">runboard.office@gmail.com</a><br />
+    Telefon: +43 676 6159050
+  </p>
+
+  <hr />
+
+  <h2>2. Worum geht's?</h2>
+  <p>
+    Runboard ist eine Lauf-App, mit der du Wettkämpfe entdeckst, die zu deinem aktuellen
+    Trainingsstand passen. Damit das funktioniert, verbindet die App sich mit deinem
+    Strava-Konto und liest deine Trainingsdaten aus. Diese Erklärung erklärt dir, welche
+    Daten dafür verarbeitet werden, warum, und welche Rechte du hast.
+  </p>
+
+  <hr />
+
+  <h2>3. Welche Daten werden verarbeitet?</h2>
+
+  <h3>3.1 Beim Login (Strava-OAuth)</h3>
+  <p>Wenn du dich mit Strava anmeldest, erhalten wir von Strava:</p>
+  <ul>
+    <li>Deine <strong>Strava-User-ID</strong> (eine Zahl)</li>
+    <li>Deinen <strong>Namen</strong></li>
+    <li>Deine <strong>E-Mail-Adresse</strong> (falls Strava sie freigibt)</li>
+    <li><strong>Access- und Refresh-Token</strong>, mit denen wir deine Strava-Daten abrufen dürfen</li>
+  </ul>
+
+  <h3>3.2 Während der Nutzung</h3>
+  <p>Wir lesen aus deinem Strava-Konto:</p>
+  <ul>
+    <li>Deine <strong>Lauf-Aktivitäten</strong> (Distanz, Höhenmeter, Pace, Dauer, Datum)</li>
+    <li>Deine <strong>Bestzeiten</strong> auf Standard-Distanzen (5K, 10K, Halbmarathon, Marathon)</li>
+  </ul>
+  <p>Diese Daten dienen ausschließlich der Berechnung deines persönlichen Match-Scores für Wettkämpfe.</p>
+
+  <h3>3.3 Lokal auf deinem Gerät</h3>
+  <p>In der App-eigenen Speicherung (AsyncStorage) liegen:</p>
+  <ul>
+    <li><code>stravaUserId</code> — deine Strava-ID</li>
+    <li><code>racesSaved</code> — Wettkämpfe, die du gespeichert hast</li>
+    <li><code>racesSkipped</code> — Wettkämpfe, die du übersprungen hast</li>
+    <li><code>userProfile</code> — Name, Wochenziel, Wettkampfziel, Läufertyp</li>
+    <li><code>weeklyGoal</code> — dein Wochen-Kilometerziel</li>
+    <li><code>onboardingComplete</code> — Marker, dass das Onboarding fertig ist</li>
+  </ul>
+  <p>Diese Daten verlassen dein Gerät nicht, außer du löschst die App oder dein Konto.</p>
+
+  <h3>3.4 Auf unserem Backend (Supabase, Frankfurt)</h3>
+  <ul>
+    <li>Deine Strava-Tokens (verschlüsselt gespeichert)</li>
+    <li>Ein Cache deiner Strava-Aktivitäten (damit wir Strava nicht bei jedem App-Start neu anfragen müssen)</li>
+    <li>Verknüpfungstabelle Strava-User-ID ↔ App-User</li>
+  </ul>
+
+  <hr />
+
+  <h2>4. Wozu (Rechtsgrundlagen)</h2>
+  <table>
+    <thead>
+      <tr><th>Verarbeitung</th><th>Zweck</th><th>Rechtsgrundlage</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Login + App-Nutzung</td><td>Vertragserfüllung (du nutzt die App)</td><td>Art. 6 Abs. 1 lit. b DSGVO</td></tr>
+      <tr><td>Verbindung zu Strava</td><td>Deine Einwilligung im OAuth-Flow</td><td>Art. 6 Abs. 1 lit. a DSGVO</td></tr>
+      <tr><td>Activity-Cache</td><td>Berechtigtes Interesse (Performance, weniger Strava-API-Last)</td><td>Art. 6 Abs. 1 lit. f DSGVO</td></tr>
+    </tbody>
+  </table>
+
+  <hr />
+
+  <h2>5. Drittanbieter</h2>
+
+  <h3>5.1 Strava (Strava, Inc., San Francisco, USA)</h3>
+  <p>
+    Die App verbindet sich über OAuth mit Strava und liest deine Aktivitäten aus. Strava
+    verarbeitet deine Daten in den USA. Grundlage ist das EU-US Data Privacy Framework
+    (Stand 2026) sowie Standardvertragsklauseln.
+  </p>
+  <p>Strava-Datenschutzerklärung: <a href="https://www.strava.com/legal/privacy" target="_blank" rel="noopener">https://www.strava.com/legal/privacy</a></p>
+
+  <h3>5.2 Supabase (Supabase Inc., gehostet in der EU, Frankfurt)</h3>
+  <p>Unser Backend läuft bei Supabase, Region eu-central-1 (Frankfurt). Alle Backend-Daten bleiben in der EU.</p>
+  <p>Supabase-Datenschutzerklärung: <a href="https://supabase.com/privacy" target="_blank" rel="noopener">https://supabase.com/privacy</a></p>
+
+  <h3>5.3 GitHub Pages (Microsoft / GitHub Inc., USA)</h3>
+  <p>
+    Diese Datenschutzerklärung selbst wird über GitHub Pages bereitgestellt. Beim Aufruf werden
+    technische Server-Logs (IP-Adresse, Browser, Zeitpunkt) durch GitHub erfasst. Wir haben
+    darauf keinen direkten Zugriff.
+  </p>
+  <p>GitHub-Datenschutzerklärung: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">github.com/site-policy</a></p>
+
+  <hr />
+
+  <h2>6. Wie lange werden deine Daten gespeichert?</h2>
+  <ul>
+    <li><strong>Solange dein Account besteht:</strong> alle oben genannten Daten</li>
+    <li><strong>Bei Account-Löschung durch dich:</strong>
+      <ul>
+        <li>Sofortige Löschung aller Daten aus unserer Datenbank</li>
+        <li>Sofortige Sperrung des Strava-Zugriffs (Token wird bei Strava revoked)</li>
+        <li>Lokale App-Daten werden bei Deinstallation der App vom Gerät entfernt</li>
+      </ul>
+    </li>
+    <li><strong>Bei Inaktivität:</strong> Konten, die mehr als 24 Monate nicht genutzt werden, werden automatisch gelöscht</li>
+  </ul>
+
+  <hr />
+
+  <h2>7. Deine Rechte</h2>
+  <p>Nach DSGVO hast du folgende Rechte:</p>
+  <ul>
+    <li><strong>Auskunft</strong> (Art. 15) — was wir über dich gespeichert haben</li>
+    <li><strong>Berichtigung</strong> (Art. 16) — falsche Daten korrigieren lassen</li>
+    <li><strong>Löschung</strong> (Art. 17) — deine Daten löschen lassen</li>
+    <li><strong>Einschränkung</strong> (Art. 18) — Verarbeitung einschränken lassen</li>
+    <li><strong>Datenübertragbarkeit</strong> (Art. 20) — deine Daten als strukturierte Datei erhalten</li>
+    <li><strong>Widerspruch</strong> (Art. 21) — gegen die Verarbeitung widersprechen</li>
+    <li><strong>Widerruf der Einwilligung</strong> (Art. 7 Abs. 3) — jederzeit mit Wirkung für die Zukunft</li>
+    <li><strong>Beschwerde bei der Aufsichtsbehörde</strong> (Art. 77) — für Österreich: Datenschutzbehörde, <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">dsb.gv.at</a></li>
+  </ul>
+  <p>Zur Ausübung deiner Rechte schreib uns an: <strong><a href="mailto:runboard.office@gmail.com">runboard.office@gmail.com</a></strong></p>
+
+  <hr />
+
+  <h2>8. Account selbst löschen</h2>
+  <p>Du kannst dein Konto jederzeit selbst löschen — direkt in der App:</p>
+  <p><strong>Profil-Tab → Einstellungen → Account löschen</strong></p>
+  <p>Nach Bestätigung wird:</p>
+  <ol>
+    <li>Der Strava-Zugriff sofort gesperrt (Token bei Strava revoked)</li>
+    <li>Dein Datensatz vollständig aus unserer Datenbank entfernt (kein Soft-Delete)</li>
+    <li>Alle lokalen App-Daten gelöscht</li>
+    <li>Du wirst zum Login-Screen zurückgeführt</li>
+  </ol>
+
+  <hr />
+
+  <h2>9. Sicherheit</h2>
+  <ul>
+    <li>Verbindung zwischen App und Backend ausschließlich über HTTPS (TLS)</li>
+    <li>Strava-Tokens werden in der Datenbank verschlüsselt gespeichert</li>
+    <li>Backend-Zugriff über Row-Level-Security (RLS) abgesichert — jeder User sieht nur seine eigenen Daten</li>
+    <li>Keine API-Keys oder Geheimnisse im App-Code</li>
+  </ul>
+
+  <hr />
+
+  <h2>10. Änderungen dieser Erklärung</h2>
+  <p>
+    Diese Erklärung kann sich ändern, wenn sich die App oder rechtliche Rahmenbedingungen
+    ändern. Die jeweils aktuelle Version findest du immer unter dieser URL.
+  </p>
+  <p>
+    <strong>Geplante nächste Version:</strong> V2 ab 07.01.2027 (Public Launch,
+    Verantwortlichkeit geht auf Leon Swoboda über, da dieser dann volljährig ist).
+  </p>
+
+  <hr />
+
+  <h2>11. Kontakt</h2>
+  <p>Bei Fragen zum Datenschutz oder zur Ausübung deiner Rechte:</p>
+  <p><strong><a href="mailto:runboard.office@gmail.com">runboard.office@gmail.com</a></strong></p>
+  <p>Wir antworten innerhalb von 30 Tagen (DSGVO-Frist).</p>
+
+  <div class="footer">
+    <strong>Stand:</strong> 17.05.2026 ·
+    <a href="impressum.html">Impressum</a>
+  </div>
+</div>
+</body>
+</html>
